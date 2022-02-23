@@ -1,12 +1,17 @@
-// import logo from './logo.svg';
-// import './App.css';
+import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
-function App() {
+//customized components
+import Home from './Container/Home';
+import { Login } from './Components';
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello World!
-    </h1>
-  );
+    <Routes>
+      <Route path='login' element={<Login />} />
+      <Route path='/*' element={<Home />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App
